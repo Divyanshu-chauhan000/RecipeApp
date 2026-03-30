@@ -32,7 +32,7 @@ export const SplashScreen = ({onFinish} : any) => {
 
 
   return (
-  <View className='flex-1 bg-[#2b0a0a] justify-center items-center'>
+  <View className='flex-1 bg-[#2b0a0a] justify-center items-center overflow-hidden'>
 
       <View className="flex-row items-center">
 
@@ -43,6 +43,7 @@ export const SplashScreen = ({onFinish} : any) => {
             width: 50,
             height: 50,
             marginRight: 10,
+             resizeMode: 'contain',
             transform: [{ translateX: translateX }],
             opacity
           }}
@@ -54,6 +55,7 @@ export const SplashScreen = ({onFinish} : any) => {
             fontSize: 28,
             fontWeight: 'bold',
             color: 'white',
+            
             transform: [{ translateX: textAnim }],
             opacity
           }}
