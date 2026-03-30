@@ -30,15 +30,17 @@ export const SplashScreen = ({onFinish} : any) => {
   })
  }, [])
 
+ console.log(Image.resolveAssetSource(require("../assets/LoginImages/hat2.png")));
+
 
   return (
-  <View className='flex-1 bg-[#2b0a0a] justify-center items-center overflow-hidden'>
+  <View className='flex-1 bg-blue-500 justify-center items-center overflow-hidden'>
 
       <View className="flex-row items-center">
 
         {/* Image */}
         <Animated.Image
-          source={require("../assets/LoginImages/hat_7270962.png")}
+          source={require("../assets/LoginImages/hat2.png")}
           style={{
             width: 50,
             height: 50,
