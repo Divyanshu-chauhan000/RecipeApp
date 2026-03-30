@@ -18,7 +18,7 @@ const register = () => {
 
   const handleRegister = async ()=>{
       const {fullName , email, password} = register
-    const res = await fetch('http://10.0.2.2:5001/api/auth/register',{
+    const res = await fetch('https://quickrecipe.onrender.com/api/auth/register',{
       method: 'POST',
       headers:{
         "Content-Type" : "application/json"

@@ -64,7 +64,7 @@ const toprecipes = () => {
       setError(null);
 
       console.log(
-        "Starting to fetch recipes from http://10.0.2.2:5001/api/recipes...",
+        "Starting to fetch recipes from https://quickrecipe.onrender.com/api/recipes...",
       );
 
       // Increase timeout to 30 seconds - backend might be slow
@@ -75,7 +75,7 @@ const toprecipes = () => {
       }, 30000); // 30 second timeout
 
       const startTime = Date.now();
-      const res = await fetch("http://10.0.2.2:5001/api/recipes", {
+      const res = await fetch("https://quickrecipe.onrender.com/api/recipes", {
         signal: controller.signal,
         headers: {
           Accept: "application/json",

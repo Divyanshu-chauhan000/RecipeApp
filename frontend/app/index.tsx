@@ -37,7 +37,7 @@ export default function Index() {
   }, []);
 
   const getAllRecipes = async () => {
-    const res = await fetch("http://10.0.2.2:5001/api/recipes");
+    const res = await fetch("https://quickrecipe.onrender.com/api/recipes");
     const data = await res.json();
     setRecipes(data);
     //  console.log(data)

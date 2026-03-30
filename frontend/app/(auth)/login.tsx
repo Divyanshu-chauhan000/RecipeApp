@@ -21,7 +21,7 @@ const handleLogin =  async ()=> {
       err.password = 'Password is required'
    }
    setError({error: err})
-   const res = await fetch('http://10.0.2.2:5001/api/auth/login',{
+   const res = await fetch('https://quickrecipe.onrender.com/api/auth/login',{
      method:'POST',
      headers:{
       "Content-Type" : "application/json"
