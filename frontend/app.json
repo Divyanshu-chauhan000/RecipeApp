@@ -27,6 +27,14 @@
       "favicon": "./assets/images/favicon.png",
       "bundler": "metro"
     },
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2b0a0a",
+      "dark": {
+        "backgroundColor": "#2b0a0a"
+      }
+    },
     "plugins": [
       "expo-router",
       [
@@ -35,9 +43,9 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#2b0a0a",
           "dark": {
-            "backgroundColor": "#000000"
+            "backgroundColor": "#2b0a0a"
           }
         }
       ],
