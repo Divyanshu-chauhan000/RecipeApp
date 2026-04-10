@@ -1,7 +1,8 @@
 import React from "react";
-import { Image, Text, View } from "react-native";
+import { Image, Pressable, Text, View } from "react-native";
 import RateRecipe from "./RateRecipe";
 import { useAuth } from "@/context/AuthContext";
+import { router } from "expo-router";
 
 type RecipeCardProp = {
   _id: string;
@@ -43,7 +44,7 @@ const RecipeCard = ({
             <Text className="text-xl  font-semibold text-white ">
               {title}
             </Text>
-            <View className="flex-row items-center gap-2">
+            <View className="flex-row items-center justify-between">
               <View className="flex-row  items-center gap-3 my-1">
                 <Image 
                   source={{uri : createdBy?.profilepic || 'https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0='}} 
@@ -51,6 +52,16 @@ const RecipeCard = ({
                 />
                 <Text className="text-xs text-gray-300 ">{createdBy?.fullName || 'Unknown'}</Text>
               </View>
+              <Pressable
+                onPress={() =>
+                  router.push({
+                    pathname: "/recipeDesc",
+                    params: { id: _id },
+                  })
+                }
+              >
+                <Text className="text-white text-sm ">Read Description...</Text>
+              </Pressable>
             </View>
           </View>
           {/* {ingredients.map((ing: string) => (

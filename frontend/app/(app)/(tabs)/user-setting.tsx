@@ -37,7 +37,7 @@ const UserSetting = () => {
            <StatusBar barStyle="light-content" />
           <LinearGradient  colors={['#2b0a0a', '#000000']} 
                     style={{ flex: 1 }}>
-          <ScrollView contentContainerStyle={{ paddingTop: 20, paddingBottom: 40,flexGrow: 1  }} style={{backgroundColor:"transparent"}}>
+          <ScrollView contentContainerStyle={{flexGrow: 1}} style={{backgroundColor:"transparent"}}>
           <TopBar title='User-Settings' />
           <View style={{ height: 20 }} />
           <TouchableOpacity style={styles.profileCard} activeOpacity={0.8}>
@@ -47,8 +47,7 @@ const UserSetting = () => {
                 <Text style={styles.name}>{user.fullName}</Text>
               )
             }
-            <Text style={styles.subtitle}>Product/UI Designer</Text>
-          </View>
+            </View>
           <Ionicons name="chevron-forward" size={18} color="#999" />
         </TouchableOpacity>
 
@@ -58,7 +57,7 @@ const UserSetting = () => {
           
             {renderItem(<Feather name="user" size={18} color="#f2ecec" />, "Profile details" , () => router.push('/profile-details'))}
                {renderItem(<Feather name="lock" size={18} color="#f2ecec" />, "Password" )}
-          {renderItem(<Ionicons name="notifications-outline" size={18} color="#f2ecec" />, "Notifications" , () => router.push('/profile-pic'))}
+          {renderItem(<Ionicons name="notifications-outline" size={18} color="#f2ecec" />, "Notifications" )}
           {renderItem(
             <Ionicons name="moon-outline" size={18} color="#f2ecec" />,
             "Dark mode",
@@ -66,7 +65,6 @@ const UserSetting = () => {
             <Switch value={currentTheme === 'dark'} onValueChange={() =>toggleTheme(currentTheme==='light' ? 'dark' : 'light')} />
           )}
         </View>
-
         <View style={styles.card} className='bg-[#5f291683]'>
           {renderItem(<Feather name="info" size={18} color="#f2ecec" />, "About application" , () => router.push('/about-app'))}
           {renderItem(<Feather name="help-circle" size={18} color="#f2ecec" />, "Help/FAQ" , () => router.push('/help-faq'))}

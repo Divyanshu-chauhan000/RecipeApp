@@ -13,13 +13,9 @@ dns.setServers([
   '8.8.8.8'
 ])
 
-
-
-
 const app = express()
 
-
-//data Base connection 
+//dataBase connection 
 connectDB();
 // MiddleWares
 app.use(cors())

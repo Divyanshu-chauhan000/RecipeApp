@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   ScrollView,
+  Image
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
@@ -29,7 +30,9 @@ const profiledetails = () => {
           <View style={styles.profileCard}>
             <View style={styles.profileHeader}>
               <View style={styles.avatar}>
-                <Ionicons name="person" size={40} color="#fff" />
+                <Image source={{uri : user?.profilepic || 'https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0='}} 
+                          style ={{ width: 80 , height : 80, borderRadius : 60}}       
+                                />
               </View>
               <View style={styles.profileInfo}>
                 <Text style={styles.name}>{user?.fullName || "User"}</Text>
@@ -61,9 +64,7 @@ const profiledetails = () => {
 
           <TouchableOpacity
             style={styles.editButton}
-            onPress={() => {
-                console.log("Edit profile pressed");
-            }}
+            onPress={() => router.push('/profile-pic')}
           >
             <Ionicons name="create-outline" size={20} color="#fff" />
             <Text style={styles.editButtonText}>Edit Profile</Text>

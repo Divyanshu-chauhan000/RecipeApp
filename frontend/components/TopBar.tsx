@@ -27,7 +27,7 @@ const TopBar = ({ title }: { title: string }) => {
           <Pressable onPress={() => router.push("/create-recipe")}>
             <Ionicons
               name="add-circle"
-              color={"rgb(130, 45, 22)"}
+              color={"rgb(208, 179, 171)"}
               size={30}
             />
           </Pressable>
